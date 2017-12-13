@@ -1,0 +1,49 @@
+	{
+		"name": "",
+		"records": [
+			{
+				"id": 1,
+				"namaDepan": "Sasongko Adi",
+				"namaBelakang": "Nugroho",
+				"username": "sasongkoadi",
+				"alamatUser": "Jl. BSD",
+				"nomerPonselUser": "08115441192",
+				"namaMotor": "Byson",
+				"jenisMotor": "Sport",
+				"CC": 150,
+				"platNomer": "KT 5525 QA",
+				"nomerRangka": "MH3RG4610HK1245",
+				"nomerMesin": "G3E4E-12345",
+				"jenisPerbaikan": "Service Berkala",
+				"tanggalService": "2017-12-13",
+				"jamService": "08:30:00",
+				"DataPerbaikan": "Bearing, oli, lampu depan, tune up",
+				"nama_depan": "Sutomo",
+				"nama_belakang": "Tomo",
+				"NIK": "1103985",
+				"serviceBerikutnya": "2018-01-10"
+			},
+			{
+				"id": 2,
+				"namaDepan": "Sutomo",
+				"namaBelakang": "tomo",
+				"username": "tomosutomo",
+				"alamatUser": "Jl. Ramayana",
+				"nomerPonselUser": "081111111111",
+				"namaMotor": "Aerox",
+				"jenisMotor": "Moped",
+				"CC": 150,
+				"platNomer": "KT 5552 QA",
+				"nomerRangka": "MH3RG4610HK1245",
+				"nomerMesin": "G3E4E-12345",
+				"jenisPerbaikan": "Service Gratis",
+				"tanggalService": "2017-12-13",
+				"jamService": "09:15:00",
+				"DataPerbaikan": "Ganti kampas kopling, ",
+				"nama_depan": "Fauzi",
+				"nama_belakang": "Achmad",
+				"NIK": "1108585",
+				"serviceBerikutnya": "2018-01-09"
+			}
+		]
+	}
