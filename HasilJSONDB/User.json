@@ -1,0 +1,23 @@
+	{
+		"name": "",
+		"records": [
+			{
+				"id": 1,
+				"namaDepan": "Sasongko Adi",
+				"namaBelakang": "Nugroho",
+				"alamatUser": "Jl. BSD",
+				"emailUser": "xxx@xxx.com",
+				"nomerPonselUser": "08115441192",
+				"userName": "sasongkoadi"
+			},
+			{
+				"id": 2,
+				"namaDepan": "Sutomo",
+				"namaBelakang": "tomo",
+				"alamatUser": "Jl. Ramayana",
+				"emailUser": "xxx@xxx.com",
+				"nomerPonselUser": "081111111111",
+				"userName": "tomosutomo"
+			}
+		]
+	}

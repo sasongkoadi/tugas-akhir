@@ -1,0 +1,29 @@
+	{
+		"name": "",
+		"records": [
+			{
+				"id": 1,
+				"namaMotor": "Aerox",
+				"jenisMotor": "Moped",
+				"CC": 150
+			},
+			{
+				"id": 2,
+				"namaMotor": "Byson",
+				"jenisMotor": "Sport",
+				"CC": 150
+			},
+			{
+				"id": 3,
+				"namaMotor": "Jupiter",
+				"jenisMotor": "Bebek",
+				"CC": 125
+			},
+			{
+				"id": 4,
+				"namaMotor": "Jupiter MX",
+				"jenisMotor": "Bebek",
+				"CC": 135
+			}
+		]
+	}

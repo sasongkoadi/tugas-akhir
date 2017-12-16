@@ -1,0 +1,23 @@
+	{
+		"name": "",
+		"records": [
+			{
+				"pegawaiId": 1,
+				"NIK": "1103985",
+				"nama_depan": "Sutomo",
+				"nama_belakang": "Tomo",
+				"nomer_telpon": "085250013192",
+				"alamat_pegawai": "Jl. Ramayana",
+				"email_pegawai": "dodol@gmail.com"
+			},
+			{
+				"pegawaiId": 2,
+				"NIK": "1108585",
+				"nama_depan": "Fauzi",
+				"nama_belakang": "Achmad",
+				"nomer_telpon": "082250040086",
+				"alamat_pegawai": "Jl. BSD",
+				"email_pegawai": "bedel@gmail.com"
+			}
+		]
+	}
