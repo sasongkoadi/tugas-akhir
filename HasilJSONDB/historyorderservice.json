@@ -1,0 +1,59 @@
+	{
+		"name": "",
+		"records": [
+			{
+				"id": 1,
+				"UserId": 1,
+				"namaDepan": "Sasongko Adi",
+				"namaBelakang": "Nugroho",
+				"username": "sasongkoadi",
+				"alamatUser": "Jl. BSD",
+				"nomerPonselUser": "08115441192",
+				"namaMotor": "Byson",
+				"jenisMotor": "Sport",
+				"CC": 150,
+				"platNomer": "KT 5525 QA",
+				"nomerRangka": "MH3RG4610HK1245",
+				"nomerMesin": "G3E4E-12345",
+				"jenisPerbaikan": "Service Berkala",
+				"tanggalService": "2017-12-13",
+				"jamService": "08:30:00"
+			},
+			{
+				"id": 2,
+				"UserId": 2,
+				"namaDepan": "Sutomo",
+				"namaBelakang": "tomo",
+				"username": "tomosutomo",
+				"alamatUser": "Jl. Ramayana",
+				"nomerPonselUser": "081111111111",
+				"namaMotor": "Aerox",
+				"jenisMotor": "Moped",
+				"CC": 150,
+				"platNomer": "KT 5552 QA",
+				"nomerRangka": "MH3RG4610HK1245",
+				"nomerMesin": "G3E4E-12345",
+				"jenisPerbaikan": "Service Gratis",
+				"tanggalService": "2017-12-13",
+				"jamService": "09:15:00"
+			},
+			{
+				"id": 3,
+				"UserId": 1,
+				"namaDepan": "Sasongko Adi",
+				"namaBelakang": "Nugroho",
+				"username": "sasongkoadi",
+				"alamatUser": "Jl. BSD",
+				"nomerPonselUser": "08115441192",
+				"namaMotor": "Jupiter",
+				"jenisMotor": "Bebek",
+				"CC": 125,
+				"platNomer": "kt 5432 qa",
+				"nomerRangka": "mhrg14ghk112",
+				"nomerMesin": "g3e4e-6543",
+				"jenisPerbaikan": "Service Gratis",
+				"tanggalService": "2017-12-13",
+				"jamService": "09:45:00"
+			}
+		]
+	}
