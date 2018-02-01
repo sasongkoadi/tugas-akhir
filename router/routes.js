@@ -6,6 +6,7 @@ const pemilikMotor = require('../controller/pemilikMotorController')
 // User Controller
 router.get('/users', userController.getAllUser)
 router.get('/users/:id', userController.getUserById)
+router.post('/adduser', userController.addUser)
 
 // Pemilik Motor Controller
 router.get('/pemilikmotor', pemilikMotor.getAllPemilikMotor)
