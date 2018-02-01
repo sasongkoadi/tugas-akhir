@@ -1,31 +1,31 @@
 const userModel = require('../model/userModel')
 
-function getAllUser (req, res) {
-  userModel.getAllUser(function (error, result) {
+const getAllUser = (request, response) => {
+  userModel.getAllUser((error, result) => {
     if (error) {
-      res.status(400)
-      res.json({
+      response.status(400)
+      response.json({
         message: error.message,
         stack: error.stack
       })
     } else {
-      res.json({
+      response.json({
         user: result
       })
     }
   })
 }
 
-function getUserById (req, res) {
-  const id = req.params.id
-  userModel.getUserById(id, function (error, result) {
+const getUserById = (request, response) => {
+  const id = request.params.id
+  userModel.getUserById(id, (error, result) => {
     if (error) {
-      res.status(400).json({
+      response.status(400).json({
         message: error.message,
         stack: error.stack
       })
     } else {
-      res.json({
+      response.json({
         user: result
       })
     }
