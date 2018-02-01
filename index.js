@@ -8,9 +8,9 @@ app.use(jsonParser)
 app.use(router)
 
 // enable CORS
-app.use(function (req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*')
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
+app.use(function (request, response, next) {
+  response.header('Access-Control-Allow-Origin', '*')
+  response.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
   next()
 })
 
