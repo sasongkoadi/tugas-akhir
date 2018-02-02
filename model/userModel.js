@@ -32,8 +32,21 @@ const addUser = ({namaDepan, namaBelakang, alamatUser, emailUser, nomerPonselUse
   })
 }
 
+const deleteUser = (id, callback) => {
+  conn.query('delete from User where id =' + id, (error, result) => {
+    if (error) {
+      callback(error, null)
+    } else {
+      callback(null, {
+        message: 'Successfully deleted id = ' + id
+      })
+    }
+  })
+}
+
 module.exports = {
   getAllUser,
   getUserById,
-  addUser
+  addUser,
+  deleteUser
 }
