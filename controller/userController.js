@@ -62,8 +62,25 @@ const addUser = (request, response) => {
   })
 }
 
+const deleteUser = (request, response) => {
+  const id = request.params.id
+  userModel.deleteUser(id, (error, result) => {
+    if (error) {
+      response.status(400).json({
+        message: error.message,
+        stack: error.stack
+      })
+    } else {
+      response.json({
+        user: result
+      })
+    }
+  })
+}
+
 module.exports = {
   getAllUser,
   getUserById,
-  addUser
+  addUser,
+  deleteUser
 }
