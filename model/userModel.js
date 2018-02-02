@@ -44,9 +44,23 @@ const deleteUser = (id, callback) => {
   })
 }
 
+const updateUser = ({namaDepan, namaBelakang, alamatUser, emailUser, nomerPonselUser, userName}, id, callback) => {
+  conn.query({
+    sql: 'update User set namaDepan = ?, namaBelakang = ?, alamatUser = ?, emailUser = ?, nomerPonselUser = ?, userName = ? where id = ?',
+    values: [namaDepan, namaBelakang, alamatUser, emailUser, nomerPonselUser, userName, id]},
+(error, result) => {
+  if (error) {
+    callback(error, null)
+  } else {
+    getUserById(id, callback)
+  }
+})
+}
+
 module.exports = {
   getAllUser,
   getUserById,
   addUser,
-  deleteUser
+  deleteUser,
+  updateUser
 }
