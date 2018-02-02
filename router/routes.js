@@ -8,6 +8,7 @@ router.get('/users', userController.getAllUser)
 router.get('/user/:id', userController.getUserById)
 router.post('/adduser', userController.addUser)
 router.delete('/user/:id', userController.deleteUser)
+router.put('/user/:id', userController.updateUser)
 
 // Pemilik Motor Controller
 router.get('/pemilikmotor', pemilikMotor.getAllPemilikMotor)
