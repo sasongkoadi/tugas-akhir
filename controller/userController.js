@@ -78,9 +78,40 @@ const deleteUser = (request, response) => {
   })
 }
 
+const updateUser = (request, response) => {
+  const id = request.params.id
+  const namaDepan = request.body.namaDepan
+  const namaBelakang = request.body.namaBelakang
+  const alamatUser = request.body.alamatUser
+  const emailUser = request.body.emailUser
+  const nomerPonselUser = request.body.nomerPonselUser
+  const userName = request.body.userName
+  const data = {
+    namaDepan,
+    namaBelakang,
+    alamatUser,
+    emailUser,
+    nomerPonselUser,
+    userName
+  }
+  userModel.updateUser(data, id, (error, result) => {
+    if (error) {
+      response.status(400).json({
+        message: error.message,
+        stack: error.stack
+      })
+    } else {
+      response.json({
+        user: result
+      })
+    }
+  })
+}
+
 module.exports = {
   getAllUser,
   getUserById,
   addUser,
-  deleteUser
+  deleteUser,
+  updateUser
 }
