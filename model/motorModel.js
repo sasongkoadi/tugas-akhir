@@ -34,8 +34,36 @@ const createNewMotorData = (namaMotor, jenisMotor, CC, callback) => {
 })
 }
 
+const updateMotorData = (namaMotor, jenisMotor, CC, id, callback) => {
+  conn.query('update Motor set namaMotor = ?, jenisMotor = ?, CC = ? where id = ?',
+[namaMotor, jenisMotor, CC, id],
+(error, result) => {
+  if (error) {
+    callback(error, null)
+  } else {
+    getMotorDataId(id, callback)
+  }
+})
+}
+
+const deleteMotorData = (id, callback) => {
+  conn.query('delete from Motor where id = ?',
+[id],
+(error, result) => {
+  if (error) {
+    callback(error, null)
+  } else {
+    callback(null, {
+      message: 'Succesfully deleted id = ' + id
+    })
+  }
+})
+}
+
 module.exports = {
   getMotorData,
   createNewMotorData,
-  getMotorDataId
+  getMotorDataId,
+  updateMotorData,
+  deleteMotorData
 }
