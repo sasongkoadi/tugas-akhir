@@ -32,7 +32,29 @@ const getPemilikMotorById = (request, response) => {
   })
 }
 
+const addPemilikMotor = (request, response) => {
+  const namaPemilik = request.body.namaPemilik
+  const motorPemilik = request.body.motorPemilik
+  const platNomer = request.body.platNomer
+  const nomerRangka = request.body.nomerRangka
+  const nomerMesin = request.body.nomerMesin
+
+  pemilikMotorModel.addPemilikMotor(namaPemilik, motorPemilik, platNomer, nomerRangka, nomerMesin, (error, result) => {
+    if (error) {
+      response.status(400).json({
+        message: error.message,
+        stack: error.stack
+      })
+    } else {
+      response.json({
+        pemilikMotor: result
+      })
+    }
+  })
+}
+
 module.exports = {
   getAllPemilikMotor,
-  getPemilikMotorById
+  getPemilikMotorById,
+  addPemilikMotor
 }
