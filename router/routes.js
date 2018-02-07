@@ -21,5 +21,6 @@ router.delete('/motor/:id', motorController.deleteMotorData)
 // Pemilik Motor Controller
 router.get('/pemilikmotor', pemilikMotor.getAllPemilikMotor)
 router.get('/pemilikmotor/:id', pemilikMotor.getPemilikMotorById)
+router.post('/addpemilikmotor', pemilikMotor.addPemilikMotor)
 
 module.exports = router
