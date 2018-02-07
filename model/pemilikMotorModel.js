@@ -17,7 +17,20 @@ const getPemilkMotorById = (id, callback) => {
   })
 }
 
+const addPemilikMotor = (namaPemilik, motorPemilik, platNomer, nomerRangka, nomerMesin, callback) => {
+  conn.query('insert into pemilikMotor (namaPemilik, motorPemilik, platNomer, nomerRangka, nomerMesin) values (?, ? , ?, ?, ?)',
+[namaPemilik, motorPemilik, platNomer, nomerRangka, nomerMesin],
+(error, result) => {
+  if (error) {
+    callback(error, null)
+  } else {
+    getPemilkMotorById(result.insertId, callback)
+  }
+})
+}
+
 module.exports = {
   getAllPemilikMotor,
-  getPemilkMotorById
+  getPemilkMotorById,
+  addPemilikMotor
 }
