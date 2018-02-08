@@ -1,6 +1,7 @@
 const app = require('express')()
 const bodyParser = require('body-parser')
 const router = require('./router/routes')
+const port = 4444
 
 // middleware
 const jsonParser = bodyParser.json()
@@ -14,6 +15,6 @@ app.use(function (request, response, next) {
   next()
 })
 
-app.listen(4444, function () {
-  console.log('Applikasi berjalan di port 4444')
+app.listen(port, function () {
+  console.log('Applikasi berjalan di port ' + port)
 })
