@@ -3,6 +3,7 @@ const router = express.Router()
 const userController = require('../controller/userController')
 const pemilikMotor = require('../controller/pemilikMotorController')
 const motorController = require('../controller/motorController')
+const pegawaiController = require('../controller/pegawaiController')
 
 // User Controller
 router.get('/users', userController.getAllUser)
@@ -25,5 +26,12 @@ router.get('/pemilikmotor/user/:id', pemilikMotor.getPemilikMotorByUserId)
 router.post('/addpemilikmotor', pemilikMotor.addPemilikMotor)
 router.put('/pemilikmotor/:id', pemilikMotor.updatePemilikMotor)
 router.delete('/pemilikmotor/:id', pemilikMotor.deletePemilikMotor)
+
+// Pegawai Controller
+router.get('/pegawai', pegawaiController.getPegawaiData)
+router.get('/pegawai/:id', pegawaiController.getPegawaiDataById)
+router.post('/addpegawai', pegawaiController.addPegawaiData)
+router.put('/pegawai/:id', pegawaiController.updatePegawaiData)
+router.delete('/pegawai/:id', pegawaiController.deletePegawaiData)
 
 module.exports = router
