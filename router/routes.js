@@ -4,6 +4,7 @@ const userController = require('../controller/userController')
 const pemilikMotor = require('../controller/pemilikMotorController')
 const motorController = require('../controller/motorController')
 const pegawaiController = require('../controller/pegawaiController')
+const orderController = require('../controller/orderController')
 
 // User Controller
 router.get('/users', userController.getAllUser)
@@ -33,5 +34,8 @@ router.get('/pegawai/:id', pegawaiController.getPegawaiDataById)
 router.post('/addpegawai', pegawaiController.addPegawaiData)
 router.put('/pegawai/:id', pegawaiController.updatePegawaiData)
 router.delete('/pegawai/:id', pegawaiController.deletePegawaiData)
+
+// Order Controller
+router.get('/orderdata', orderController.getOrderData)
 
 module.exports = router
