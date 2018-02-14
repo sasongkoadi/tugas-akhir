@@ -19,10 +19,10 @@ const getUserById = (id, callback) => {
   })
 }
 
-const addUser = ({namaDepan, namaBelakang, alamatUser, emailUser, nomerPonselUser, userName}, callback) => {
+const addUser = ({namaDepan, namaBelakang, alamatUser, emailUser, nomerPonselUser, userName, password}, accessToken, callback) => {
   conn.query({
-    sql: 'insert into User (namaDepan, namaBelakang, alamatUser, emailUser, nomerPonselUser, userName) values (?, ?, ?, ?, ?, ?)',
-    values: [namaDepan, namaBelakang, alamatUser, emailUser, nomerPonselUser, userName]
+    sql: 'insert into User (namaDepan, namaBelakang, alamatUser, emailUser, nomerPonselUser, userName, accessToken, password) values (?, ?, ?, ?, ?, ?, ?, PASSWORD(?))',
+    values: [namaDepan, namaBelakang, alamatUser, emailUser, nomerPonselUser, userName, accessToken, password]
   }, (error, result) => {
     if (error) {
       callback(error, null)
