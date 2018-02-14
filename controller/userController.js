@@ -1,4 +1,5 @@
 const userModel = require('../model/userModel')
+const jwt = require('jsonwebtoken')
 
 const getAllUser = (request, response) => {
   userModel.getAllUser((error, result) => {
@@ -17,19 +18,33 @@ const getAllUser = (request, response) => {
 }
 
 const getUserById = (request, response) => {
-  const id = request.params.id
-  userModel.getUserById(id, (error, result) => {
-    if (error) {
-      response.status(400).json({
-        message: error.message,
-        stack: error.stack
-      })
-    } else {
-      response.json({
-        user: result
-      })
-    }
-  })
+  const bearerHeader = request.headers['authorization']
+  if (bearerHeader !== undefined) {
+    const bearer = bearerHeader.split(' ')
+    const bearerToken = bearer[1]
+    request.token = bearerToken
+    jwt.verify(request.token, 'Rahasiaku', (error, authData) => {
+      if (error) {
+        response.sendStatus(403)
+      } else {
+        const id = request.params.id
+        userModel.getUserById(id, (error, result) => {
+          if (error) {
+            response.status(400).json({
+              message: error.message,
+              stack: error.stack
+            })
+          } else {
+            response.json({
+              user: result
+            })
+          }
+        })
+      }
+    })
+  } else {
+    response.sendStatus(403)
+  }
 }
 
 const addUser = (request, response) => {
@@ -39,24 +54,34 @@ const addUser = (request, response) => {
   const emailUser = request.body.emailUser
   const nomerPonselUser = request.body.nomerPonselUser
   const userName = request.body.userName
+  const password = request.body.password
   const data = {
     namaDepan,
     namaBelakang,
     alamatUser,
     emailUser,
     nomerPonselUser,
-    userName
+    userName,
+    password
   }
-  userModel.addUser(data, (error, result) => {
+
+  jwt.sign({emailUser, password}, 'Rahasiaku', (error, token) => {
     if (error) {
       response.status(400)
-      response.json({
-        message: error.message,
-        stack: error.stack
-      })
     } else {
-      response.json({
-        user: result
+      var accessToken = token
+      userModel.addUser(data, accessToken, (error, result) => {
+        if (error) {
+          response.status(400)
+          response.json({
+            message: error.message,
+            stack: error.stack
+          })
+        } else {
+          response.json({
+            user: result
+          })
+        }
       })
     }
   })
