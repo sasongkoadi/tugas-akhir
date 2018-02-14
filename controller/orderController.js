@@ -1,4 +1,4 @@
-const orderModel = require('../model/orederModel')
+const orderModel = require('../model/orderModel')
 
 const getOrderData = (request, response) => {
   orderModel.getOrderData((error, result) => {
